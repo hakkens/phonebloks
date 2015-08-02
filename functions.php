@@ -1,5 +1,14 @@
 <?php
 
+function remove_nodes( $bar ) {
+
+	$bar->remove_node( 'comments' );
+
+}
+
+add_action( 'admin_bar_menu', 'remove_nodes', 999 );
+
+
 function manage_columns( $columns ) {
 
 	unset( $columns[ 'comments' ] );
@@ -30,6 +39,7 @@ function init() {
 
 add_action( 'admin_init', 'init' );
 
+
 function manage_menu() {
 
 	remove_menu_page( 'edit-comments.php' );
@@ -42,6 +52,7 @@ function manage_menu() {
 }
 
 add_action( 'admin_menu', 'manage_menu' );
+
 
 if( function_exists( 'acf_add_options_page' ) ) {
 
@@ -75,6 +86,7 @@ function load_assets() {
 
 add_action( 'wp_enqueue_scripts', 'load_assets' );
 
+
 function add_support() {
 
 	add_theme_support( 'title-tag' );
@@ -82,6 +94,7 @@ function add_support() {
 }
 
 add_action( 'after_setup_theme', 'add_support' );
+
 
 function register_menus() {
 
