@@ -6,8 +6,6 @@
 	Author: Leonard Lamprecht
 */
 
-@import "//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,700,300";
-
 body {
 	font-family: "Open Sans", sans-serif;
 	font-weight: 400;
@@ -42,6 +40,11 @@ body.dark {
 
 	body.middle .center {
 		text-align: center;
+	}
+
+	body.middle .aligncenter {
+		margin: auto;
+		display: block;
 	}
 
 	body.middle #header + section,
@@ -314,7 +317,7 @@ iframe {
 	text-align: center;
 	text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
 	line-height: 27px;
-	background: url(img/video.png) center top;
+	background: url(images/video.png) center top;
 	background-size: cover;
 	width: 100%;
 }
@@ -361,7 +364,7 @@ iframe {
 }
 
 .elevator {
-	background: url(img/crowd.png) no-repeat center bottom;
+	background: url(images/crowd.png) no-repeat center bottom;
 	background-size: 180%;
 	padding-bottom: 90%;
 }
@@ -371,7 +374,7 @@ iframe {
 }
 
 .elevator.skyline {
-	background-image: url(img/city.png);
+	background-image: url(images/city.png);
 	padding-top: 60px;
 }
 
@@ -433,7 +436,7 @@ iframe {
 
 	.elevator.skyline img {
 		margin-top: 60px;
-		content: url("img/logo-list-big.png");
+		content: url("images/logo-list-big.png");
 	}
 
 }
@@ -529,6 +532,11 @@ iframe {
 		font-size: 13px;
 	}
 
+	.news figure img {
+		height: 160px;
+		width: auto;
+	}
+
 }
 
 .concepts {
@@ -571,7 +579,7 @@ iframe {
 	}
 
 	.concepts .inner .item img {
-		height: 180px;
+		height: 250px;
 	}
 
 	.concepts .inner .item span {
@@ -621,7 +629,7 @@ iframe {
 	content: "";
 	width: 55px;
 	height: 70px;
-	background: url(img/posts/arr-left.svg) no-repeat center center;
+	background: url(images/posts/arr-left.svg) no-repeat center center;
 	background-size: 100% auto;
 	margin-left: -66px;
 	display: block;
@@ -722,7 +730,7 @@ iframe {
 	}
 
 	.posts article.left:before {
-		background-image: url(img/posts/arr-right.svg);
+		background-image: url(images/posts/arr-right.svg);
 		margin: 0;
 		right: -52px;
 	}
@@ -971,7 +979,8 @@ iframe {
 	visibility: hidden;
 }
 
-#header nav ul li a.active svg #line, #header nav ul li a:hover svg #line {
+#header nav ul li.current_page_item a svg #line,
+#header nav ul li a:hover svg #line {
 	visibility: visible;
 }
 
@@ -985,7 +994,7 @@ iframe {
 
 #header .logo {
 	display: block;
-	background: url(img/logo.svg) no-repeat center left 15px;
+	background: url(images/logo.svg) no-repeat center left 15px;
 	background-size: 100px;
 	text-indent: -99999px;
 	float: left;
@@ -1116,6 +1125,7 @@ iframe {
 	color: inherit;
 }
 
+#footer nav ul li.current_page_item a,
 #footer nav ul li a:hover {
 	border-color: currentColor;
 }
@@ -1210,7 +1220,7 @@ iframe {
 
 .about hr {
 	border: 0;
-	height: 120px;
+	height: 80px;
 }
 
 .about hr.small {
@@ -1268,11 +1278,20 @@ iframe {
 .team figure .twitter {
 	color: #808080;
 	text-decoration: none;
-	background: url(img/twitter.svg) no-repeat left center;
-	background-size: 16px;
 	display: inline-block;
-	padding-left: 25px;
 	margin-top: 10px;
+}
+
+.team figure .twitter:before {
+	padding-right: 10px;
+	content: "";
+	height: 20px;
+	width: 20px;
+	display: inline-block;
+	background: url(images/social/twitter.svg) no-repeat left center;
+	background-size: 16px;
+	vertical-align: -5px;
+	opacity: .5;
 }
 
 @media (min-width: 768px) {
