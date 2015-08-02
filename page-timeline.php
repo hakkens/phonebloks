@@ -77,7 +77,7 @@ $posts = get_posts( $args );
 				<time><?php the_time( 'F Y' ) ?></time>
 
 				<figure>
-					<iframe src="https://www.youtube.com/embed/<?= $id ?>?modestbranding=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
+					<iframe src="//www.youtube.com/embed/<?= $id ?>?modestbranding=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
 				</figure>
 
 				<h1><?php the_title() ?></h1>

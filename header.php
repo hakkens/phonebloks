@@ -3,26 +3,12 @@
 
 	<head>
 
-		<title><?php wp_title() ?></title>
-
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 
 		<?php wp_head() ?>
 
 	</head>
-
-	<!--
-	{% if page.url == "/index.html" %}
-		{% assign class = "front" %}
-	{% elsif page.url == "/about.html" %}
-		{% assign class = "middle" %}
-	{% elsif page.url == "/industry.html" or page.url == "/journey.html" %}
-		{% assign class = "dark" %}
-	{% else %}
-		{% assign class = "" %}
-	{% endif %}
-	-->
 
 	<?php
 
@@ -60,7 +46,7 @@
 		<header id="header">
 			<div class="inner">
 				
-				<a href="<?php home_url() ?>" class="logo"><?php bloginfo( 'name' ) ?></a>
+				<a href="<?= home_url() ?>" class="logo"><?php bloginfo( 'name' ) ?></a>
 				
 				<div>
 					<span>
@@ -92,7 +78,7 @@
 
 					foreach( $to_replace as $item ) {
 
-						$filename = get_template_directory() . '/img/' . str_replace( ' ', '-', strtolower( $item ) ) . '.svg';
+						$filename = get_template_directory() . '/images/' . str_replace( ' ', '-', strtolower( $item ) ) . '.svg';
 						$svg = file_get_contents( $filename );
 
 						$menu = str_replace( $item, $svg, $menu );

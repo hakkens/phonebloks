@@ -11,13 +11,10 @@
 <section class="hero">
 
 	<div class="inner full">
-		<h1>Hi, we are Phonebloks!</h1>
-		<p>... and we are trying to change the way how electronics are made, creating less waste.</p>
-		<small>*Oh, and we love to make videos.</small>
+		<h1><?php the_field( 'title' ) ?></h1>
+		<p><?php the_field( 'subtitle' ) ?></p>
+		<small><?php the_field( 'info' ) ?></small>
 	</div>
-
-	<iframe style="display: none" src="//www.youtube.com/embed/oDAw7vW7H0c?enablejsapi=1">
-	</iframe>
 
 </section>
 
@@ -50,13 +47,16 @@
 </section>
 
 <section class="elevator">
-	
 	<div class="inner">
-		<h2>Community</h2>
-		<p>We believe in the power of the crowd. Bringing people together and start a movement to bring this idea to life.</p>
-		<a href="#">Join us</a>
-	</div>
 
+		<h2><?php the_field( 'elevator_heading' ) ?></h2>
+		<p><?php the_field( 'elevator_description' ) ?></p>
+
+		<a href="<?php the_field( 'elevator_url' ) ?>" target="_blank">
+			<?php the_field( 'elevator_label' ) ?>
+		</a>
+
+	</div>
 </section>
 
 <section class="news">
@@ -66,54 +66,34 @@
 	</div>
 	
 	<div class="inner">
-		
+
+		<?php
+
+		include_once( ABSPATH . WPINC . '/feed.php' );
+		$feed = fetch_feed( 'http://blog.phonebloks.com/rss' );
+
+		if ( ! is_wp_error( $feed ) ) {
+			$max = $feed->get_item_quantity( 4 );
+			$items = $feed->get_items( 0, $max );
+		}
+
+		?>
+
+		<?php foreach( $items as $item ) : ?>
+
 		<figure>
 			
-			<img src="assets/img/sample-1.png">
+			<img src="<?= get_image_src( $item->get_content() ) ?>">
 			
 			<figcaption>
-				<h1>Title of the news item</h1>
-				<p>A short story about the item and what it’s about here that you can read here mostly it’s just useless words b...</p>
-				<a href="#">Read full story</a>
+				<h1><?= esc_html( $item->get_title() ) ?></h1>
+				<p><?= trim_content( $item->get_content() ) ?></p>
+				<a href="<?= esc_url( $item->get_permalink() ) ?>">Read full story</a>
 			</figcaption>
 			
 		</figure>
-		
-		<figure>
-			
-			<img src="assets/img/sample-2.png">
-			
-			<figcaption>
-				<h1>Title of the news item</h1>
-				<p>A short story about the item and what it’s about here that you can read here mostly it’s just useless words b...</p>
-				<a href="#">Read full story</a>
-			</figcaption>
-			
-		</figure>
-		
-		<figure>
-			
-			<img src="assets/img/sample-3.png">
-			
-			<figcaption>
-				<h1>Title of the news item</h1>
-				<p>A short story about the item and what it’s about here that you can read here mostly it’s just useless words b...</p>
-				<a href="#">Read full story</a>
-			</figcaption>
-			
-		</figure>
-		
-		<figure>
-			
-			<img src="assets/img/sample-4.png">
-			
-			<figcaption>
-				<h1>Title of the news item</h1>
-				<p>A short story about the item and what it’s about here that you can read here mostly it’s just useless words b...</p>
-				<a href="#">Read full story</a>
-			</figcaption>
-			
-		</figure>
+
+		<?php endforeach; ?>
 		
 	</div>
 	
