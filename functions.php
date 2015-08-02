@@ -1,9 +1,43 @@
 <?php
 
+function manage_columns( $columns ) {
+
+	unset( $columns[ 'comments' ] );
+	unset( $columns[ 'tags' ] );
+	unset( $columns[ 'categories' ] );
+
+	return $columns;
+
+}
+
+function column_init() {
+
+	add_filter( 'manage_posts_columns' , 'manage_columns' );
+
+}
+
+add_action( 'admin_init' , 'column_init' );
+
+
+function init() {
+
+	add_theme_support( 'post-formats', [
+		'image',
+		'video'
+	]);
+
+}
+
+add_action( 'admin_init', 'init' );
+
 function manage_menu() {
 
-	remove_menu_page( 'edit.php' );
 	remove_menu_page( 'edit-comments.php' );
+	remove_submenu_page( 'edit.php', 'edit-tags.php?taxonomy=post_tag' );
+	remove_submenu_page( 'edit.php', 'edit-tags.php?taxonomy=category' );
+
+	remove_meta_box( 'tagsdiv-post_tag', 'post', 'normal' );
+	remove_meta_box( 'categorydiv', 'post', 'normal' );
 
 }
 
