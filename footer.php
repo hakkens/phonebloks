@@ -17,35 +17,35 @@
 				</nav>
 
 				<form>
-					<input type="email" placeholder="Join our Mailinglist">
+					<input type="email" placeholder="<?php the_field( 'newsletter', 'option' ) ?>">
 				</form>
 
 				<div class="social">
 
 					<?php
 
-						$links = get_field( 'social', 'option' );
+					$links = get_field( 'social', 'option' );
 
-						foreach( $links as $link ) {
+					foreach( $links as $link ) {
 
-							$path = get_template_directory() . '/img/social/' . $link[ 'icon' ] . '.svg';
+						$path = get_template_directory() . '/images/social/' . $link[ 'icon' ] . '.svg';
 
-							?>
+						?>
 
-							<a href="<?= $link[ 'link' ] ?>" target="_blank">
-								<?= file_get_contents( $path ) ?>
-							</a>
+						<a href="<?= $link[ 'link' ] ?>" target="_blank">
+							<?= file_get_contents( $path ) ?>
+						</a>
 
-							<?php
+						<?php
 
-						}
+					}
 
 					?>
 
 				</div>
 
 				<figure>
-					<img src="<?= get_stylesheet_directory_uri() ?>/img/by.svg">
+					<img src="<?= get_stylesheet_directory_uri() ?>/images/by.svg">
 				</figure>
 
 			</div>
