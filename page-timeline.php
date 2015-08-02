@@ -1,67 +1,95 @@
+<?php
+
+	/*
+		Template Name: Journey
+	*/
+
+	get_header();
+
+?>
+
 <section class="title big timeline">
 	<div class="inner">
-		<p>Our journey is unplanned. We just go. Trying to make this idea happen, step by step.</p>
-		<h1>It starts here, in 2012</h1>
+		<p><?= the_field( 'subtitle' ) ?></p>
+		<h1><?= the_field( 'info' ) ?></h1>
 	</div>
 </section>
+
+<?php
+
+$args = [
+	'order' => 'ASC',
+	'posts_per_page' => -1,
+	'orderby' => 'date'
+];
+
+$posts = get_posts( $args );
+
+?>
 
 <section class="posts">
 	<div class="inner">
 
-		<article class="right">
-			<time>December 2012</time>
-			<p>Dave is looking for a way to reduce e-waste in the world.</p>
-			<figure>
-				<img src="assets/img/posts/1.png">
-			</figure>
-		</article>
+	<?php
 
-		<article class="left">
-			<time>February 2012</time>
-			<p>The idea of a modular phone is born, thinking of ways how to make this a reality.</p>
-			<figure>
-				<img src="assets/img/posts/2.png">
-			</figure>
-		</article>
+	$i = 0;
 
-		<article class="large">
-			<time>September 2013</time>
-			<figure>
-				<iframe width="854" height="510" src="https://www.youtube.com/embed/oDAw7vW7H0c?modestbranding=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
-			</figure>
-			<h1>Phonebloks online</h1>
-			<p>Finding a way how to make this idea a reality, a campaign to make it happen, gathering support and showing companies it’s doable.</p>
-		</article>
+	foreach( $posts as $post ) : the_post();
 
-		<article class="right">
-			<time>September 2012</time>
-			<p>Within days it spreaded all over the world.</p>
-			<figure>
-				<img src="assets/img/posts/3.png">
-			</figure>
-		</article>
+	$format = get_post_format();
+	$position = $i++ % 2 == 0 ? 'right' : 'left';
 
-		<article class="left">
-			<time>September 2013</time>
-			<p>Gawin joined the team</p>
-		</article>
+	?>
 
-		<article class="right">
-			<time>October 2013</time>
-			<p>Thunderclap campaign launched. Over 979,253 supporters send out the message on social media that they support Phonebloks, reaching over 380,000,000 people.</p>
-			<figure>
-				<img src="assets/img/posts/4.png">
-			</figure>
-		</article>
+		<?php if( $format == false ): ?>
 
-		<article class="large">
-			<time>September 2013</time>
-			<figure>
-				<iframe width="854" height="510" src="https://www.youtube.com/embed/BaPf4ZIbDVM?modestbranding=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
-			</figure>
-			<h1>The next step</h1>
-			<p>In order the push the project forward we needed to connect with companeis that are able to build it. Found Motorola, owend by google. Been working on  They had all the reasorcec te make it happen.</p>
-		</article>
+			<article class="<?= $position ?>">
+
+				<time><?php the_time( 'F Y' ) ?></time>
+				<?php the_content() ?>
+
+			</article>
+
+		<?php elseif( $format == 'image' ): ?>
+
+			<article class="<?= $position ?>">
+
+				<time><?php the_time( 'F Y' ) ?></time>
+				<?php the_content() ?>
+
+				<figure>
+					<img src="<?php the_field( 'thumbnail' ) ?>">
+				</figure>
+
+			</article>
+
+		<?php
+
+		elseif( $format == 'video' ):
+		$i++;
+
+		$id = explode( '=', get_field( 'thumbnail' ) )[1];
+
+		?>
+
+			<article class="large">
+
+				<time><?php the_time( 'F Y' ) ?></time>
+
+				<figure>
+					<iframe src="https://www.youtube.com/embed/<?= $id ?>?modestbranding=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
+				</figure>
+
+				<h1><?php the_title() ?></h1>
+				<?php the_content() ?>
+
+			</article>
+
+		<?php endif; ?>
+
+	<?php endforeach; ?>
 
 	</div>
 </section>
+
+<?php get_footer(); ?>

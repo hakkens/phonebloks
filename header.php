@@ -40,6 +40,7 @@
 		break;
 
 		case 'development':
+		case 'timeline':
 		$class = 'dark';
 		break;
 
