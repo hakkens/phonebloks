@@ -13,7 +13,7 @@
 	<?php
 
 	$template = get_page_template();
-	$handle = explode( '.', explode( '-', $template )[2] )[0];
+	$handle = explode( '.', explode( '-', $template )[3] )[0];
 
 	switch( $handle ) {
 
