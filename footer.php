@@ -44,9 +44,9 @@
 
 				</div>
 
-				<figure>
+				<a href="https://davehakkens.nl" class="by" target="_blank">
 					<img src="<?= get_stylesheet_directory_uri() ?>/images/by.svg">
-				</figure>
+				</a>
 
 			</div>
 		</footer>
