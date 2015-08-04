@@ -12,8 +12,10 @@
 
 	<?php
 
+	$numb = strpos( get_bloginfo( 'url' ), 'localhost' ) !== false ? 2 : 3;
+
 	$template = get_page_template();
-	$handle = explode( '.', explode( '-', $template )[3] )[0];
+	$handle = explode( '.', explode( '-', $template )[$numb] )[0];
 
 	switch( $handle ) {
 
