@@ -68,8 +68,19 @@ function init() {
 add_action( 'admin_init', 'init' );
 
 
+
+
 function manage_menu() {
 
+	global $submenu;
+
+	$submenu['options-general.php'][] = [
+		'Savvii',
+		'manage_options',
+		admin_url( 'admin.php' ) . '?page=savvii_dashboard'
+	];
+
+	remove_menu_page( 'savvii_dashboard' );
 	remove_menu_page( 'edit-comments.php' );
 
 	remove_submenu_page( 'edit.php', 'edit-tags.php?taxonomy=post_tag' );
@@ -80,7 +91,7 @@ function manage_menu() {
 
 }
 
-add_action( 'admin_menu', 'manage_menu' );
+add_action( 'admin_menu', 'manage_menu', 999 );
 
 
 if( function_exists( 'acf_add_options_sub_page' ) ) {
