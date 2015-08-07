@@ -23,8 +23,19 @@
 		<?php while ( have_rows( 'phones' ) ) : the_row(); ?>
 		
 		<div class="item">
-			<img src="<?php the_sub_field( 'icon' ) ?>">
-			<span><?php the_sub_field( 'name' ) ?></span>
+
+			<a href="#">
+
+				<img src="<?php the_sub_field( 'icon' ) ?>">
+				<span><?php the_sub_field( 'name' ) ?></span>
+
+				<div>
+					<img src="<?php the_sub_field( 'cover' ) ?>">
+					<p><?php the_sub_field( 'description' ) ?></p>
+				</div>
+
+			</a>
+
 		</div>
 
 		<?php endwhile; ?>
@@ -35,8 +46,8 @@
 <section class="friends">
 
 	<div class="inner">
-		<h1>Our Friends</h1>
-		<h2>Close connected and fully support what we are doing</h2>
+		<h1><?php the_field( 'friends_heading' ) ?></h1>
+		<h2><?php the_field( 'friends_description' ) ?></h2>
 	</div>
 
 	<div class="inner">

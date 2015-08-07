@@ -31,7 +31,13 @@ $( document ).ready( function() {
 		popup.find( 'img, p' ).remove();
 
 		$( this ).find( 'p' ).clone().prependTo( popup );
-		$( this ).find( 'img' ).clone().prependTo( popup );
+
+		var which = $( this ).find( 'img + span' ).length ? 'div img' : 'img';
+		$( this ).find( which ).clone().prependTo( popup );
+
+		if( which == 'div img' ) {
+			$( '.overlay' ).find( 'img' ).addClass( 'big' );
+		}
 
 		$( '.overlay' ).css( 'display', 'flex' ).hide().fadeIn( 300 );
 		e.preventDefault();

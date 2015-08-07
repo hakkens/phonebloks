@@ -557,6 +557,19 @@ iframe {
 	margin: 30px 0;
 }
 
+.concepts .inner .item a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.concepts .inner .item a:hover {
+	border: 0;
+}
+
+.concepts .inner .item a > div {
+	display: none;
+}
+
 .concepts .inner .item img {
 	height: 145px;
 }
@@ -1445,6 +1458,12 @@ iframe {
 	max-width: 150px;
 	margin-top: 40px;
 	margin-bottom: 30px;
+}
+
+.overlay .inner img.big {
+	width: calc( 100% + 60px );
+	margin: -30px -30px 5px -30px;
+	max-width: none;
 }
 
 .overlay .inner .close {
