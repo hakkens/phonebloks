@@ -37,55 +37,67 @@ $posts = get_posts( $args );
 	foreach( $posts as $post ) : the_post();
 
 	$format = get_post_format();
+	$size = intval( get_field( 'size' ) );
+
 	$position = $i++ % 2 == 0 ? 'right' : 'left';
+
+	if( $size == 1 ) {
+		$position = 'large';
+	}
 
 	?>
 
-		<?php if( $format == false ): ?>
+		<article class="<?= $position ?>">
 
-			<article class="<?= $position ?>">
+			<time><?php the_time( 'F Y' ) ?></time>
 
-				<time><?php the_time( 'F Y' ) ?></time>
+			<?php if( $format == false ): ?>
+
 				<?php the_content() ?>
 
-			</article>
+			<?php elseif( $format == 'image' ): ?>
 
-		<?php elseif( $format == 'image' ): ?>
+				<?php if( $size == 1 ): ?>
 
-			<article class="<?= $position ?>">
+					<figure>
+						<img src="<?php the_field( 'thumbnail' ) ?>">
+					</figure>
 
-				<time><?php the_time( 'F Y' ) ?></time>
-				<?php the_content() ?>
+					<h1><?php the_title() ?></h1>
+					<?php the_content() ?>
 
-				<figure>
-					<img src="<?php the_field( 'thumbnail' ) ?>">
-				</figure>
+				<?php else: ?>
 
-			</article>
+					<?php the_content() ?>
 
-		<?php
+					<figure>
+						<img src="<?php the_field( 'thumbnail' ) ?>">
+					</figure>
 
-		elseif( $format == 'video' ):
-		$i++;
+				<?php endif; ?>
+			
+			<?php
 
-		$id = explode( '=', get_field( 'thumbnail' ) )[1];
+			elseif( $format == 'video' ):
+			$i++;
 
-		?>
+			$id = explode( '=', get_field( 'thumbnail' ) )[1];
 
-			<article class="large">
-
-				<time><?php the_time( 'F Y' ) ?></time>
+			?>
 
 				<figure>
 					<iframe src="//www.youtube.com/embed/<?= $id ?>?modestbranding=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
 				</figure>
 
-				<h1><?php the_title() ?></h1>
+				<?php if( $size == 1 ): ?>
+					<h1><?php the_title() ?></h1>
+				<?php endif; ?>
+				
 				<?php the_content() ?>
 
-			</article>
+			<?php endif; ?>
 
-		<?php endif; ?>
+		</article>
 
 	<?php endforeach; ?>
 

@@ -784,6 +784,11 @@ iframe {
 		margin: 0 0 25px 0;
 	}
 
+	.posts article.right p,
+	.posts article.left p {
+		margin-top: 20px;
+	}
+
 	.posts article:before, .posts article:after {
 		width: 95px;
 	}
