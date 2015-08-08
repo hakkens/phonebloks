@@ -1,24 +1,28 @@
 $( document ).ready( function() {
 
-	var video = $( '.hero video' ),
-		realDOM = video.get( 0 );
+	if( $( '.hero video' ).length ) {
 
-	if( document.body.clientWidth >= 992 ) {
-		video.attr( 'autoplay', true );
-		realDOM.play();
-	}
-
-	$( window ).resize( function() {
+		var video = $( '.hero video' ),
+			realDOM = video.get( 0 );
 
 		if( document.body.clientWidth >= 992 ) {
 			video.attr( 'autoplay', true );
 			realDOM.play();
-		} else {
-			video.removeAttr( 'autoplay' );
-			realDOM.pause();
 		}
 
-	});
+		$( window ).resize( function() {
+
+			if( document.body.clientWidth >= 992 ) {
+				video.attr( 'autoplay', true );
+				realDOM.play();
+			} else {
+				video.removeAttr( 'autoplay' );
+				realDOM.pause();
+			}
+
+		});
+
+	}
 
 	var header = $( '#header' ),
 		nav = header.find( 'nav' ),
