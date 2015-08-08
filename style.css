@@ -734,6 +734,30 @@ iframe {
 	color: #000;
 }
 
+.companies {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin-top: 100px;
+}
+
+.companies .company {
+	width: 50%;
+	margin: 15px 0;
+}
+
+.companies .company img {
+	width: 70%;
+}
+
+.companies .company p {
+	display: none;
+}
+
+.companies .company a:hover {
+	border: 0;
+}
+
 @media (min-width: 768px) {
 
 	p + a {
@@ -1070,7 +1094,6 @@ iframe {
 
 	.elevator.skyline img {
 		margin-top: 60px;
-		content: url("images/logo-list-big.png");
 	}
 
 	.news figure {
@@ -1366,6 +1389,10 @@ iframe {
 
 	.help .eighty {
 		width: 72%;
+	}
+
+	.companies .company {
+		width: 25%;
 	}
 
 }

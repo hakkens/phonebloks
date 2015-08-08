@@ -70,12 +70,23 @@
 <section class="elevator skyline">
 
 	<div class="inner">
-		<h1>Other companies that are contributing</h1>
-		<h2>All companies that contribute to a modular phone in some way</h2>
+		<h1><?php the_field( 'companies_title' ) ?></h1>
+		<h2><?php the_field( 'companies_subtitle' ) ?></h2>
 	</div>
 
-	<div class="inner">
-		<img src="/assets/img/logo-list.png">
+	<div class="inner companies">
+		<?php while ( have_rows( 'companies' ) ) : the_row(); ?>
+
+			<div class="company">
+			
+				<a href="#">
+					<img src="<?php the_sub_field( 'logo' ) ?>">
+					<p><?php the_sub_field( 'description' ) ?></p>
+				</a>
+
+			</div>
+
+		<?php endwhile; ?>
 	</div>
 
 </section>
