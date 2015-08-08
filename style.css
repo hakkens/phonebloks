@@ -1212,28 +1212,6 @@ iframe {
 	width: 81%;
 }
 
-#footer form input {
-	background: #D8D8D8;
-	border: 0;
-	font-size: 15px;
-	padding: 15px 20px;
-	text-align: center;
-	width: 80%;
-}
-
-#footer form input:focus, #footer form input:active {
-	outline: none;
-	background: #fff;
-}
-
-@media (min-width: 992px) {
-
-	#footer form input {
-		width: 380px;
-	}
-
-}
-
 #footer .social a {
 	width: 35px;
 	height: 35px;
@@ -1259,12 +1237,12 @@ iframe {
 	fill: #3b5998;
 }
 
-#footer .social a[href*="vimeo"]:hover svg {
-	fill: #1ab7ea;
-}
-
 #footer .social a[href*="youtube"]:hover svg {
 	fill: #cd201f;
+}
+
+#footer .social a[href*="nl"]:hover svg {
+	fill: #eeff40;
 }
 
 @media (min-width: 768px) {

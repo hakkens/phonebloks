@@ -16,10 +16,6 @@
 
 				</nav>
 
-				<form>
-					<input type="email" placeholder="<?php the_field( 'newsletter', 'option' ) ?>">
-				</form>
-
 				<div class="social">
 
 					<?php
