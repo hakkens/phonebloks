@@ -50,6 +50,7 @@ function manage_columns( $columns ) {
 function column_init() {
 
 	add_filter( 'manage_posts_columns' , 'manage_columns' );
+	add_filter( 'manage_pages_columns' , 'manage_columns' );
 
 }
 
