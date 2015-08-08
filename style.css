@@ -312,22 +312,40 @@ iframe {
 
 .hero {
 	color: #fff;
-	height: calc( 100vh - 65px );
-	display: table;
-	text-align: center;
 	text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
 	line-height: 27px;
-	background: url(images/video.png) center top;
-	background-size: cover;
 	width: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+.hero .wrap {
+	display: table;
+	text-align: center;
+	width: inherit;
+	height: calc( 100vh - 65px );
+}
+
+.hero video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: auto;
+	width: 100%;
+	z-index: 100;
+	display: none;
 }
 
 .hero h1 {
 	line-height: 1.3em;
 }
 
-.hero .inner {
-	background: rgba(116, 190, 231, 0.9);
+.hero .wrap {
+	background: rgb(116, 190, 231);
+	z-index: 200;
+}
+
+.hero .wrap .inner {
 	display: table-cell;
 	vertical-align: middle;
 }
@@ -359,6 +377,19 @@ iframe {
 
 	.hero small {
 		font-size: 15px;
+	}
+
+	.hero video {
+		display: block;
+	}
+
+	.hero .wrap {
+		background: rgba(116, 190, 231, 0.96);
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
 	}
 
 }

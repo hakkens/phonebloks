@@ -10,10 +10,16 @@
 
 <section class="hero">
 
-	<div class="inner full">
-		<h1><?php the_field( 'title' ) ?></h1>
-		<p><?php the_field( 'subtitle' ) ?></p>
-		<small><?php the_field( 'info' ) ?></small>
+	<video loop muted>
+		<source src="<?= get_field( 'background' )['url'] ?>" type="video/mp4">
+	</video>
+
+	<div class="wrap">
+		<div class="inner full">
+			<h1><?php the_field( 'title' ) ?></h1>
+			<p><?php the_field( 'subtitle' ) ?></p>
+			<small><?php the_field( 'info' ) ?></small>
+		</div>
 	</div>
 
 </section>
