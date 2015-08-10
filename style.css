@@ -187,20 +187,15 @@ iframe {
 }
 
 .news figure {
-	margin: 70px 10px;
+	margin: 25px 10px;
 	background: #fff;
 	overflow: hidden;
 }
 
-.news figure img {
-	width: calc( 100% + 2px	);
-	max-width: none;
-	margin: 0 -1px;
-}
-
 .news figure figcaption {
 	color: #000;
-	padding: 40px 20px;
+	padding: 20px;
+	text-align: left;
 }
 
 .news figure figcaption h1 {
@@ -209,15 +204,19 @@ iframe {
 	font-size: 17px;
 }
 
+.news figure img,
 .news figure figcaption p {
-	font-size: 11px;
-	line-height: 20px;
+	display: none;
 }
 
 .news figure figcaption a {
-	margin-top: 40px;
+	margin-top: 10px;
 	font-size: 15px;
 	display: inline-block;
+}
+
+.news .inner:last-child {
+	padding: 20px 15px;
 }
 
 .concepts {
@@ -847,6 +846,12 @@ iframe {
 		justify-content: center;
 	}
 
+	.news figure figcaption p {
+		font-size: 11px;
+		line-height: 20px;
+		display: block;
+	}
+
 	.news figure {
 		width: 45%;
 		margin: 2%;
@@ -1121,7 +1126,13 @@ iframe {
 
 	.news figure img {
 		height: 160px;
+		display: block;
 		width: auto;
+	}
+
+	.news .inner:last-child {
+		padding-top: 0;
+		padding-bottom: 0;
 	}
 
 	.concepts .inner {
