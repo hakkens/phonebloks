@@ -141,8 +141,19 @@ iframe {
 	line-height: 1.3em;
 }
 
+.hero > img {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	z-index: -100;
+	width: auto;
+	max-width: none;
+	min-width: 100%;
+}
+
 .hero .wrap {
-	background: rgb(116, 190, 231);
+	background: rgba(116, 190, 231, 0.96);
 	z-index: 200;
 }
 
@@ -1059,8 +1070,11 @@ iframe {
 		display: block;
 	}
 
+	.hero > img {
+		display: none;
+	}
+
 	.hero .wrap {
-		background: rgba(116, 190, 231, 0.96);
 		position: absolute;
 		left: 0;
 		top: 0;

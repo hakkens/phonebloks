@@ -10,6 +10,8 @@
 
 <section class="hero">
 
+	<img src="<?php the_field( 'background_small' ) ?>">
+
 	<video loop muted>
 		<source src="<?= get_field( 'background' )['url'] ?>" type="video/mp4">
 	</video>
