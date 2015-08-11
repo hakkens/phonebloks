@@ -698,7 +698,9 @@ iframe {
 	padding: 50px 15px;
 	overflow-x: auto;
 	justify-content: center;
+	-webkit-justify-content: center;
 	flex-direction: column;
+	-webkit-flex-direction: column;
 	display: none;
 }
 
@@ -742,8 +744,11 @@ iframe {
 
 .companies {
 	display: flex;
+	display: -webkit-flex;
 	flex-direction: row;
+	-webkit-flex-direction: row;
 	flex-wrap: wrap;
+	-webkit-flex-wrap: wrap;
 	margin-top: 100px;
 }
 
@@ -849,8 +854,11 @@ iframe {
 
 	.news .inner:last-child {
 		display: flex;
+		display: -webkit-flex;
 		flex-wrap: wrap;
+		-webkit-flex-wrap: wrap;
 		justify-content: center;
+		-webkit-justify-content: center;
 	}
 
 	.news figure figcaption p {
@@ -939,7 +947,9 @@ iframe {
 
 	.team .inner:last-child {
 		display: flex;
+		display: -webkit-flex;
 		flex-wrap: wrap;
+		-webkit-flex-wrap: wrap;
 	}
 
 	.team figure {
@@ -1001,14 +1011,17 @@ iframe {
 
 	.inner .drag-left {
 		order: 1;
+		-webkit-order: 1;
 	}
 
 	.inner .drag-right {
 		order: 2;
+		-webkit-order: 2;
 	}
 
 	.teasers .inner {
 		display: flex;
+		display: -webkit-flex;
 		margin-top: 300px;
 		margin-bottom: 300px;
 	}
@@ -1257,7 +1270,9 @@ iframe {
 
 	.faq .inner {
 		flex-wrap: wrap;
+		-webkit-flex-wrap: wrap;
 		flex-direction: row;
+		-webkit-flex-direction: row;
 		padding: 0;
 	}
 
