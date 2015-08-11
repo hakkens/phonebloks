@@ -1264,6 +1264,9 @@ iframe {
 	.faq .fifty {
 		width: 50%;
 		margin: 60px 0;
+		text-align: left;
+		padding: 0 15px;
+		box-sizing: border-box;
 	}
 
 	#header {
