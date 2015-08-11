@@ -80,6 +80,10 @@ iframe {
 	padding-top: 30%;
 }
 
+.centring {
+	cursor: pointer;
+}
+
 .title.big p {
 	margin-bottom: 100px;
 	font-size: 18px;
@@ -248,16 +252,12 @@ iframe {
 	margin: 30px 0;
 }
 
-.concepts .inner .item a {
+.concepts .inner .item .centring {
 	text-decoration: none;
 	color: inherit;
 }
 
-.concepts .inner .item a:hover {
-	border: 0;
-}
-
-.concepts .inner .item a > div {
+.concepts .inner .item .centring > div {
 	display: none;
 }
 
@@ -416,13 +416,9 @@ iframe {
 	display: none;
 }
 
-.friends .inner .item a {
+.friends .inner .item .centring {
 	display: inline-block;
 	width: 70%;
-}
-
-.friends .inner .item a:hover {
-	border: 0;
 }
 
 .faq .fifty {

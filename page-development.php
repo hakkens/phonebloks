@@ -24,7 +24,7 @@
 		
 		<div class="item">
 
-			<a href="#">
+			<div class="centring">
 
 				<img src="<?php the_sub_field( 'icon' ) ?>">
 				<span><?php the_sub_field( 'name' ) ?></span>
@@ -34,7 +34,7 @@
 					<p><?php the_sub_field( 'description' ) ?></p>
 				</div>
 
-			</a>
+			</div>
 
 		</div>
 
@@ -55,10 +55,10 @@
 		<?php while ( have_rows( 'friends_logos' ) ) : the_row(); ?>
 
 		<div class="item">
-			<a href="#">
+			<div class="centring">
 				<img src="<?php the_sub_field( 'icon' ) ?>">
 				<p><?php the_sub_field( 'description' ) ?></p>
-			</a>
+			</div>
 		</div>
 
 		<?php endwhile; ?>
@@ -79,10 +79,10 @@
 
 			<div class="company">
 			
-				<a href="#">
+				<div class="centring">
 					<img src="<?php the_sub_field( 'logo' ) ?>">
 					<p><?php the_sub_field( 'description' ) ?></p>
-				</a>
+				</div>
 
 			</div>
 

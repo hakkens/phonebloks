@@ -49,7 +49,7 @@ $( document ).ready( function() {
 
 	});
 
-	$( '.item a, .company a' ).click( function(e) {
+	$( '.item > div, .company > div' ).click( function(e) {
 
 		var popup = $( '.overlay .inner' );
 		popup.find( 'img, p' ).remove();
