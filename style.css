@@ -1273,6 +1273,10 @@ iframe {
 		top: 0;
 	}
 
+	.customize-support #header {
+		top: 32px;
+	}
+
 	#header.over {
 		border-bottom: 1px solid #dddddd;
 	}
