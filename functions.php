@@ -69,17 +69,19 @@ function init() {
 add_action( 'admin_init', 'init' );
 
 
-
-
 function manage_menu() {
 
 	global $submenu;
 
-	$submenu['options-general.php'][] = [
-		'Savvii',
-		'manage_options',
-		admin_url( 'admin.php' ) . '?page=savvii_dashboard'
-	];
+	if( current_user_can( 'manage_options') ) {
+
+		$submenu['options-general.php'][] = [
+			'Savvii',
+			'manage_options',
+			admin_url( 'admin.php' ) . '?page=savvii_dashboard'
+		];
+
+	}
 
 	remove_menu_page( 'savvii_dashboard' );
 	remove_menu_page( 'edit-comments.php' );
@@ -113,8 +115,8 @@ function list_pages() {
 		'exclude' => [ 5 ]
 	];
 
-
 	return get_pages( $args );
+
 }
 
 function load_assets() {
@@ -152,14 +154,5 @@ function register_menus() {
 }
 
 add_action( 'after_setup_theme', 'register_menus' );
-
-
-
-
-
-
-
-
-
 
 ?>
