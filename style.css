@@ -412,7 +412,7 @@ iframe {
 	vertical-align: bottom;
 }
 
-.friends .inner .item p {
+.friends .centring div {
 	display: none;
 }
 
@@ -761,7 +761,7 @@ iframe {
 	width: 70%;
 }
 
-.companies .company p {
+.companies .centring div {
 	display: none;
 }
 

@@ -23,7 +23,6 @@
 		<?php while ( have_rows( 'phones' ) ) : the_row(); ?>
 		
 		<div class="item">
-
 			<div class="centring">
 
 				<img src="<?php the_sub_field( 'icon' ) ?>">
@@ -35,7 +34,6 @@
 				</div>
 
 			</div>
-
 		</div>
 
 		<?php endwhile; ?>
@@ -56,8 +54,14 @@
 
 		<div class="item">
 			<div class="centring">
+
 				<img src="<?php the_sub_field( 'icon' ) ?>">
-				<p><?php the_sub_field( 'description' ) ?></p>
+
+				<div>
+					<img src="<?php the_sub_field( 'cover' ) ?>">
+					<p><?php the_sub_field( 'description' ) ?></p>
+				</div>
+
 			</div>
 		</div>
 
@@ -78,12 +82,16 @@
 		<?php while ( have_rows( 'companies' ) ) : the_row(); ?>
 
 			<div class="company">
-			
 				<div class="centring">
-					<img src="<?php the_sub_field( 'logo' ) ?>">
-					<p><?php the_sub_field( 'description' ) ?></p>
-				</div>
 
+					<img src="<?php the_sub_field( 'logo' ) ?>">
+
+					<div>
+						<img src="<?php the_sub_field( 'cover' ) ?>">
+						<p><?php the_sub_field( 'description' ) ?></p>
+					</div>
+
+				</div>
 			</div>
 
 		<?php endwhile; ?>

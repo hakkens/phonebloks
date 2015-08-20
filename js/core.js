@@ -56,12 +56,8 @@ $( document ).ready( function() {
 
 		$( this ).find( 'p' ).clone().prependTo( popup );
 
-		var which = $( this ).find( 'img + span' ).length ? 'div img' : 'img';
-		$( this ).find( which ).clone().prependTo( popup );
-
-		if( which == 'div img' ) {
-			$( '.overlay' ).find( 'img' ).addClass( 'big' );
-		}
+		$( this ).find( 'div img' ).clone().prependTo( popup );
+		$( '.overlay' ).find( 'img' ).addClass( 'big' );
 
 		$( '.overlay' ).css( 'display', 'flex' ).hide().fadeIn( 300 );
 		e.preventDefault();
