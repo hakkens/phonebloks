@@ -702,6 +702,7 @@ iframe {
 	flex-direction: column;
 	-webkit-flex-direction: column;
 	display: none;
+	min-height: 100%;
 }
 
 .overlay .inner {
