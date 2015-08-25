@@ -1,28 +1,5 @@
 <?php
 
-function get_image_src( $content ) {
-
-	$r = explode( '<img src="', $content );
-
-    if( isset( $r[1] ) ){
-        $r = explode( '"', $r[1] );
-        return $r[0];
-    }
-
-    return '';
-
-}
-
-function trim_content( $pre ) {
-
-	$post = str_replace( '<p>', '', explode( '</p>', $pre )[1] );
-	$post = wp_strip_all_tags( $post );
-	$post = wp_trim_words( $post, 18 );
-
-	return $post;
-
-}
-
 function editor_style() {
 	add_editor_style( 'css/editor.css' );
 }

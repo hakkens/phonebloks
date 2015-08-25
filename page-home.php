@@ -68,17 +68,17 @@
 </section>
 
 <section class="news">
-	
+
 	<div class="inner">
 		<h1>Latest news</h1>
 	</div>
-	
+
 	<div class="inner">
 
 		<?php
 
 		include_once( ABSPATH . WPINC . '/feed.php' );
-		$feed = fetch_feed( 'http://blog.phonebloks.com/rss' );
+		$feed = fetch_feed( 'https://davehakkens.nl/tag/phonebloks/feed/' );
 
 		if ( ! is_wp_error( $feed ) ) {
 			$max = $feed->get_item_quantity( 4 );
@@ -90,21 +90,19 @@
 		<?php foreach( $items as $item ) : ?>
 
 		<figure>
-			
-			<img src="<?= get_image_src( $item->get_content() ) ?>">
-			
+
 			<figcaption>
 				<h1><?= esc_html( $item->get_title() ) ?></h1>
-				<p><?= trim_content( $item->get_content() ) ?></p>
+				<p><?= wp_strip_all_tags( $item->get_content() ) ?></p>
 				<a href="<?= esc_url( $item->get_permalink() ) ?>">Read full story</a>
 			</figcaption>
-			
+
 		</figure>
 
 		<?php endforeach; ?>
-		
+
 	</div>
-	
+
 </section>
 
 <?php get_footer(); ?>
