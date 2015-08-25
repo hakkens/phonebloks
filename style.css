@@ -1148,10 +1148,19 @@ iframe {
 		font-size: 13px;
 	}
 
-	.news figure img {
-		height: 160px;
+	.news figure span {
 		display: block;
-		width: auto;
+		width: 100%;
+		height: 160px;
+		overflow: hidden;
+	}
+
+	.news figure img {
+		display: block;
+		object-fit: cover;
+		max-width: none;
+		width: 100%;
+		height: 100%;
 	}
 
 	.news .inner:last-child {

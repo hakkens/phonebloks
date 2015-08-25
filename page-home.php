@@ -91,6 +91,10 @@
 
 		<figure>
 
+			<span>
+				<img src="<?= get_between( $item->get_content(), 'src="', '"' ) ?>">
+			</span>
+
 			<figcaption>
 				<h1><?= esc_html( $item->get_title() ) ?></h1>
 				<p><?= wp_strip_all_tags( $item->get_content() ) ?></p>
