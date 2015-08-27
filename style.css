@@ -770,6 +770,36 @@ iframe {
 	border: 0;
 }
 
+.stories {
+	margin-top: 80px;
+}
+
+.stories article {
+	text-align: left;
+	margin-bottom: 65px;
+}
+
+.stories article a {
+	font-size: 15px;
+	font-weight: 700;
+	color: inherit;
+	display: block;
+	margin-bottom: 15px;
+}
+
+.stories article p {
+	line-height: 1.9em;
+	font-size: 13px;
+	margin: 0;
+}
+
+.stories hr {
+	border: 0;
+    width: 30%;
+    border-top: 1px dashed #CECECE;
+    margin: 100px auto;
+}
+
 @media (min-width: 768px) {
 
 	p + a {
@@ -837,7 +867,7 @@ iframe {
 
 	.elevator {
 		background-size: 100%;
-		padding-bottom: 550px;
+		padding-bottom: 400px;
 	}
 
 	.elevator p {
@@ -956,6 +986,19 @@ iframe {
 	.team figure {
 		width: 50%;
 		max-width: 50%;
+	}
+
+	.stories > div {
+		display: flex;
+		display: -webkit-flex;
+		flex-wrap: wrap;
+		-webkit-flex-wrap: wrap;
+	}
+
+	.stories article {
+		width: 50%;
+		box-sizing: border-box;
+		padding: 0 15px;
 	}
 
 }
@@ -1446,6 +1489,43 @@ iframe {
 
 	.companies .company {
 		width: 25%;
+	}
+
+	.stories {
+		margin-top: 120px;
+	}
+
+	.stories article {
+		padding: 0;
+		margin-bottom: 55px;
+	}
+
+	.stories article a {
+		color: #74BEE7;
+		font-size: 17px;
+	}
+
+	.stories article a:hover {
+		text-decoration: none;
+		border-color: transparent;
+		color: #000;
+	}
+
+	.stories article:nth-child(odd) {
+		padding-right: 30px;
+	}
+
+	.stories article:nth-child(even) {
+		padding-left: 30px;
+	}
+
+	.stories article p {
+		font-weight: 400;
+		color: #585858;
+	}
+
+	.stories hr {
+		width: 180px;
 	}
 
 }

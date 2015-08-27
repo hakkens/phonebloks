@@ -97,6 +97,60 @@
 		<?php endwhile; ?>
 	</div>
 
+	<div class="inner stories">
+
+	<hr>
+
+	<?php
+
+		include_once( ABSPATH . WPINC . '/feed.php' );
+		$feed = fetch_feed( 'http://blog.phonebloks.com/rss' );
+
+		if ( ! is_wp_error( $feed ) ) {
+			$max = $feed->get_item_quantity( 8 );
+			$items = $feed->get_items( 0, $max );
+		}
+
+	?>
+
+		<div class="articles">
+
+			<?php foreach( $items as $item ) : ?>
+
+			<?php
+
+			$content = trim_content( $item->get_content() );
+
+			if( $content == '' ) {
+				continue;
+			}
+
+			?>
+
+			<article>
+				<a href="<?= esc_url( $item->get_permalink() ) ?>">
+
+				<?php
+
+				$title = esc_html( $item->get_title() );
+				$key = strpos( $title, 'by' ) !== false ? 'by' : 'By';
+
+				echo explode( $key, $title, 2 )[0];
+
+				?>
+
+				</a>
+				<p>
+					<?= $content ?>
+				</p>
+			</article>
+
+			<?php endforeach; ?>
+
+		</div>
+
+	</div>
+
 </section>
 
 <aside class="overlay">

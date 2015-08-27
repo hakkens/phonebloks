@@ -1,5 +1,15 @@
 <?php
 
+function trim_content( $pre ) {
+
+	$post = str_replace( '<p>', '', explode( '</p>', $pre )[1] );
+	$post = wp_strip_all_tags( $post );
+	$post = wp_trim_words( $post, 30 );
+
+	return $post;
+
+}
+
 function get_between( $content, $start, $end ){
 
 	$r = explode( $start, $content );
