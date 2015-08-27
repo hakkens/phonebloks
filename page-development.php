@@ -128,7 +128,7 @@
 			?>
 
 			<article>
-				<a href="<?= esc_url( $item->get_permalink() ) ?>">
+				<a href="<?= esc_url( $item->get_permalink() ) ?>" target="_blank">
 
 				<?php
 
