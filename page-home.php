@@ -97,7 +97,7 @@
 
 			<figcaption>
 				<h1><?= esc_html( $item->get_title() ) ?></h1>
-				<p><?= wp_strip_all_tags( $item->get_content() ) ?></p>
+				<p><?= wp_trim_words( wp_strip_all_tags( $item->get_content() ), 25 ) ?></p>
 				<a href="<?= esc_url( $item->get_permalink() ) ?>">Read full story</a>
 			</figcaption>
 
