@@ -55,7 +55,7 @@
 		<div class="item">
 			<div class="centring">
 
-				<img src="<?php the_sub_field( 'icon' ) ?>">
+				<img src="<?= get_sub_field( 'icon' )['sizes']['logo'] ?>">
 
 				<div>
 					<img src="<?php the_sub_field( 'cover' ) ?>">
@@ -85,7 +85,7 @@
 				<div class="centring">
 
 
-					<img src="<?php the_sub_field( 'logo' ) ?>">
+					<img src="<?= get_sub_field( 'logo' )['sizes']['logo'] ?>">
 
 					<div>
 						<img src="<?php the_sub_field( 'cover' ) ?>">
