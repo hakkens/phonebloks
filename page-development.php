@@ -29,7 +29,7 @@
 				<span><?php the_sub_field( 'name' ) ?></span>
 
 				<div>
-					<img src="<?php the_sub_field( 'cover' ) ?>">
+					<img src="<?= get_sub_field( 'cover' )['sizes']['cover'] ?>">
 					<p><?php the_sub_field( 'description' ) ?></p>
 				</div>
 
@@ -58,7 +58,7 @@
 				<img src="<?= get_sub_field( 'icon' )['sizes']['logo'] ?>">
 
 				<div>
-					<img src="<?php the_sub_field( 'cover' ) ?>">
+					<img src="<?= get_sub_field( 'cover' )['sizes']['cover'] ?>">
 					<p><?php the_sub_field( 'description' ) ?></p>
 				</div>
 
@@ -88,7 +88,7 @@
 					<img src="<?= get_sub_field( 'logo' )['sizes']['logo'] ?>">
 
 					<div>
-						<img src="<?php the_sub_field( 'cover' ) ?>">
+						<img src="<?= get_sub_field( 'cover' )['sizes']['cover'] ?>">
 						<p><?php the_sub_field( 'description' ) ?></p>
 					</div>
 
@@ -98,17 +98,12 @@
 		<?php endwhile; ?>
 	</div>
     
-    	
-<div class="inner">
+	<div class="inner">
 		<h1>Latest updates from our blog.</h1>
-	
 	</div>
 
 	<div class="inner stories">
     
-   
-
-
 	<?php
 
 		include_once( ABSPATH . WPINC . '/feed.php' );
