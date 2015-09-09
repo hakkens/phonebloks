@@ -751,6 +751,7 @@ iframe {
 	flex-wrap: wrap;
 	-webkit-flex-wrap: wrap;
 	margin-top: 100px;
+	    margin-bottom: 100px;
 }
 
 .companies .company {

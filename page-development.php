@@ -79,10 +79,11 @@
 	</div>
 
 	<div class="inner companies">
-		<?php while ( have_rows( 'companies' ) ) : the_row(); ?>
+		<?php while (  have_rows( 'companies' ) ) : the_row(); ?>
 
 			<div class="company">
 				<div class="centring">
+
 
 					<img src="<?php the_sub_field( 'logo' ) ?>">
 
@@ -96,10 +97,17 @@
 
 		<?php endwhile; ?>
 	</div>
+    
+    	
+<div class="inner">
+		<h1>Latest updates from our blog.</h1>
+	
+	</div>
 
 	<div class="inner stories">
+    
+   
 
-	<hr>
 
 	<?php
 
