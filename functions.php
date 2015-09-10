@@ -2,7 +2,7 @@
 
 
 add_image_size( 'logo', 300, 300, false );
-add_image_size( 'cover', 700, 300, true );
+add_image_size( 'cover', 700, 500, true );
 
 
 function trim_content( $pre ) {

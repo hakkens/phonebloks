@@ -58,6 +58,13 @@ iframe {
 	width: 100%;
 }
 
+
+.blogtitle h1 {
+	font-weight:200;
+}
+
+
+
 .inner {
 	height: inherit;
 	padding: 0 15px;
@@ -760,7 +767,7 @@ iframe {
 }
 
 .companies .company img {
-	width: 70%;
+	width: 80%;
 }
 
 .companies .centring div {
@@ -808,9 +815,9 @@ iframe {
 		display: inline-block;
 	}
 
-	a {
+	/*a {
 		font-size: 16px;
-	}
+	}*/
 
 	.inner {
 		width: 720px;
@@ -826,6 +833,9 @@ iframe {
 	.teasers .inner p {
 		max-width: 480px;
 		margin: auto;
+		font-size: 18px;
+    	line-height: 2;
+
 	}
 
 	.title {
@@ -1080,8 +1090,8 @@ iframe {
 	}
 
 	.teasers .inner p {
-		font-size: 16px;
-		margin-top: 30px;
+	font-size: 18px;
+    line-height: 2.1;
 	}
 
 	.teasers .inner img {
@@ -1166,7 +1176,7 @@ iframe {
 	}
 
 	.elevator.skyline img {
-		margin-top: 60px;
+		margin-top: 30px;
 	}
 
 	.news figure {

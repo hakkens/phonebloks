@@ -99,7 +99,7 @@
 	</div>
     
 	<div class="inner">
-		<h1>Latest updates from our blog.</h1>
+		<div class="blogtitle">	<h1>Latest development updates from our blog.</h1>	</div>
 	</div>
 
 	<div class="inner stories">
