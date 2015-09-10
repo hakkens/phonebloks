@@ -164,7 +164,7 @@ iframe {
 }
 
 .hero .wrap {
-	background: rgba(116, 190, 231, 0.96);
+	background: rgba(116, 190, 231, 0.85);
 	z-index: 200;
 }
 
@@ -430,6 +430,14 @@ iframe {
 
 .faq .fifty {
 	margin: 80px 0;
+}
+
+.faq .inner p {
+    font-size: 16px!important;
+}
+
+.faq .inner h2 {
+    font-size: 24px!important;
 }
 
 .faq .fifty p {
@@ -819,6 +827,12 @@ iframe {
 		font-size: 16px;
 	}*/
 
+.posts article figure iframe {
+	height: 230px;
+	width: 100%;
+}
+
+
 	.inner {
 		width: 720px;
 		margin-left: auto;
@@ -887,7 +901,7 @@ iframe {
 	}
 
 	.news {
-		padding: 120px 0;
+		padding: 70px 0;
 	}
 
 	.news .inner:first-child h1 {
@@ -979,7 +993,7 @@ iframe {
 	}
 
 	#footer {
-		padding: 100px 0;
+		padding: 30px 0;
 	}
 
 	#footer .by img {
@@ -1257,7 +1271,7 @@ iframe {
 
 	.posts article.right p,
 	.posts article.left p {
-		margin-top: 20px;
+		margin-top: 10px;
 	}
 
 	.posts article:before, .posts article:after {
