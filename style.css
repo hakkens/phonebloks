@@ -58,7 +58,6 @@ iframe {
 	width: 100%;
 }
 
-
 .blogtitle h1 {
 	font-weight:200;
 }
@@ -68,8 +67,6 @@ iframe {
     font-size: 14px;
     line-height: 2.5;
 }
-
-
 
 .inner {
 	height: inherit;
@@ -439,11 +436,11 @@ iframe {
 }
 
 .faq .inner p {
-    font-size: 14px!important;
+    font-size: 14px !important;
 }
 
 .faq .inner h2 {
-    font-size: 20px!important;
+    font-size: 20px !important;
 }
 
 .faq .fifty p {
@@ -771,8 +768,7 @@ iframe {
 	-webkit-flex-direction: row;
 	flex-wrap: wrap;
 	-webkit-flex-wrap: wrap;
-	margin-top: 100px;
-	    margin-bottom: 100px;
+	margin: 100px 0;
 }
 
 .companies .company {
@@ -829,15 +825,10 @@ iframe {
 		display: inline-block;
 	}
 
-	/*a {
-		font-size: 16px;
-	}*/
-
-.posts article figure iframe {
-	height: 230px;
-	width: 100%;
-}
-
+	.posts article figure iframe {
+		height: 230px;
+		width: 100%;
+	}
 
 	.inner {
 		width: 720px;
@@ -855,7 +846,6 @@ iframe {
 		margin: auto;
 		font-size: 18px;
     	line-height: 2;
-
 	}
 
 	.title {

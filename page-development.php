@@ -84,7 +84,6 @@
 			<div class="company">
 				<div class="centring">
 
-
 					<img src="<?= get_sub_field( 'logo' )['sizes']['logo'] ?>">
 
 					<div>
@@ -99,7 +98,9 @@
 	</div>
     
 	<div class="inner">
-		<div class="blogtitle">	<h1>Latest development updates from our blog.</h1>	</div>
+		<div class="blogtitle">
+			<h1>Latest development updates from our blog.</h1>
+		</div>
 	</div>
 
 	<div class="inner stories">
@@ -143,9 +144,7 @@
 				?>
 
 				</a>
-				<p>
-					<?= $content ?>
-				</p>
+				<p><?= $content ?></p>
 			</article>
 
 			<?php endforeach; ?>
