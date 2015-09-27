@@ -23,9 +23,13 @@
 	<?php
 
 	$numb = strpos( get_bloginfo( 'url' ), 'localhost' ) !== false ? 2 : 3;
-
 	$template = get_page_template();
-	$handle = explode( '.', explode( '-', $template )[$numb] )[0];
+
+	if( $template ) {
+		$handle = explode( '.', explode( '-', $template )[$numb] )[0];
+	} else {
+		$handle = 'about';
+	}
 
 	switch( $handle ) {
 

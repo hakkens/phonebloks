@@ -633,6 +633,20 @@ iframe {
 	fill: #eeff40;
 }
 
+#error {
+	background: none !important;
+}
+
+#error .inner {
+	text-align: center !important;
+	padding: 200px 0 !important;
+	background: transparent;
+}
+
+#error .inner h1 {
+	margin-top: 0;
+}
+
 .about {
 	padding: 120px 0;
 }
