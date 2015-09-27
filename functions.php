@@ -129,7 +129,7 @@ function load_assets() {
 	wp_enqueue_style( 'fonts', '//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,700,300' );
 
 	wp_deregister_script( 'jquery' );
-	wp_enqueue_script( 'jquery', 'http://code.jquery.com/jquery-1.11.3.min.js', [], false, true );
+	wp_enqueue_script( 'jquery', '//code.jquery.com/jquery-1.11.3.min.js', [], false, true );
 	wp_enqueue_script( 'core', get_stylesheet_directory_uri() . '/js/core.js', [ 'jquery' ], false, true );
 
 }
