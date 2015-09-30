@@ -21,7 +21,7 @@
 	<div class="inner">
 
 		<?php while ( have_rows( 'phones' ) ) : the_row(); ?>
-		
+
 		<div class="item">
 			<div class="centring">
 
@@ -96,15 +96,15 @@
 
 		<?php endwhile; ?>
 	</div>
-    
+
 	<div class="inner">
 		<div class="blogtitle">
-			<h1>Latest development updates from our blog.</h1>
+			<h1>Latest Development Updates From Our Blog.</h1>
 		</div>
 	</div>
 
 	<div class="inner stories">
-    
+
 	<?php
 
 		include_once( ABSPATH . WPINC . '/feed.php' );
