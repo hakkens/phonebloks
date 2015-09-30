@@ -51,15 +51,17 @@ $( document ).ready( function() {
 
 	$( '.item > div, .company > div' ).click( function(e) {
 
-		var popup = $( '.overlay .inner' );
-		popup.find( 'img, p' ).remove();
+		$( '.overlay .inner' ).find( 'img, p' ).remove();
 
-		$( this ).find( 'p' ).clone().prependTo( popup );
+		var figure = $( '.overlay figure' ),
+			figcaption = $( '.overlay figcaption' );
 
-		$( this ).find( 'div img' ).clone().prependTo( popup );
+		$( this ).find( 'p' ).clone().prependTo( figcaption );
+
+		$( this ).find( 'div img' ).clone().prependTo( figure );
 		$( '.overlay' ).find( 'img' ).addClass( 'big' );
 
-		$( '.overlay' ).css( 'display', 'flex' ).hide().fadeIn( 300 );
+		$( '.overlay' ).fadeIn( 300 );
 		e.preventDefault();
 
 	});

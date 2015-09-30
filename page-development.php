@@ -158,7 +158,11 @@
 <aside class="overlay">
 
 	<div class="inner">
-		<a href="#" class="close">close</a>
+		<figure>
+			<figcaption>
+				<a href="#" class="close">close</a>
+			</figcaption>
+		</figure>
 	</div>
 
 </aside>

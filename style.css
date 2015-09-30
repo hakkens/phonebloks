@@ -452,6 +452,7 @@ iframe {
 #header {
 	background: #fff;
 	width: 100%;
+	overflow: hidden;
 }
 
 #header a:hover {
@@ -553,7 +554,7 @@ iframe {
 
 #footer {
 	background: #2E2E2E;
-	padding: 20px 0;
+	padding: 150px 0;
 }
 
 #footer nav, #footer form,
@@ -724,28 +725,30 @@ iframe {
 	right: 0;
 	top: 0;
 	bottom: 0;
-	background: rgba(0, 0, 0, 0.8);
 	z-index: 2000;
-	padding: 0px 15px;
-	overflow-x: auto;
-	justify-content: center;
-	-webkit-justify-content: center;
-	flex-direction: column;
-	-webkit-flex-direction: column;
+	overflow: hidden;
 	display: none;
-	min-height: 100%;
+	background: #fff;
 }
 
 .overlay .inner {
-	max-width: 700px;
-	background: #fff;
-	padding-bottom:40px;
-	padding: 30px;
-	box-sizing: border-box;
+	padding: 0;
 }
 
-.overlay .inner p {
+.overlay figure {
+	margin: 0;
+}
+
+.overlay figcaption {
+	overflow: auto;
+	height: calc( 100vh - 220px );
+	box-sizing: border-box;
+	padding: 25px;
+}
+
+.overlay p {
 	text-align: left;
+	margin: 0;
 }
 
 .overlay .inner img {
@@ -755,18 +758,23 @@ iframe {
 }
 
 .overlay .inner img.big {
-	width: calc( 100% + 60px );
-	margin: -30px -30px 5px -30px;
+	width: 100%;
+	margin: 0;
 	max-width: none;
+	height: 220px;
+	object-fit: cover;
+	display: block;
 }
 
 .overlay .inner .close {
 	background: #000;
 	color: #fff;
 	border-radius: 11px;
-	padding: 6px 15px;
-	border: 2px solid #fff;
+	padding: 13px 32px;
 	transition: 0.3s ease;
+	font-size: 16px;
+	display: block;
+	margin-top: 60px;
 }
 
 .overlay .inner .close:hover {
@@ -998,12 +1006,29 @@ iframe {
 		font-size: 12px;
 	}
 
+	.overlay .inner {
+		width: auto;
+	}
+
+	.overlay .inner img.big {
+		height: 250px;
+		width: 100vw;
+	}
+
+	.overlay figcaption {
+		height: calc( 100vh - 250px );
+		width: 720px;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 70px 15px;
+	}
+
 	#header .inner {
 		margin: auto;
 	}
 
 	#footer {
-		padding: 30px 0;
+		padding: 150px 0;
 	}
 
 	#footer .by img {
@@ -1370,6 +1395,41 @@ iframe {
 		text-align: left;
 		padding: 0 15px;
 		box-sizing: border-box;
+	}
+
+	.overlay {
+		background: rgba(0, 0, 0, 0.8);
+	}
+
+	.overlay .inner {
+		display: flex;
+		display: -webkit-flex;
+		justify-content: center;
+		-webkit-justify-content: center;
+	}
+
+	.overlay figure {
+		width: 550px;
+		background: #fff;
+	}
+
+	.overlay .inner img.big {
+		width: 100%;
+	}
+
+	.overlay figcaption {
+		width: 100%;
+		padding: 25px;
+	}
+
+	.overlay .inner .close {
+		padding: 9px 36px;
+		display: inline-block;
+		border: 3px solid #fff;
+	}
+
+	.overlay .inner .close:hover {
+		border-color: #000;
 	}
 
 	#header {
