@@ -1,4 +1,4 @@
-# Story Hopper
+# Phonebloks
 
 This is the Jekyll site that powers [Phonebloks](http://phonebloks.com).
 
