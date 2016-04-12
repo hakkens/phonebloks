@@ -1,0 +1,17 @@
+# Site settings
+title: Phonebloks
+url: http://phonebloks.com
+baseurl: ''
+description: A phone worth keeping
+
+# Build
+sass:
+  style: compressed
+
+# Misc
+exclude: ['CNAME', 'LICENSE.md', 'README.md']
+permalink: /movie/:title
+
+# Gems
+gems:
+  - jekyll-sitemap
