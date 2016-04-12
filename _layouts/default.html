@@ -25,7 +25,21 @@
     <link rel="stylesheet" href="/assets/css/styles.css">
   </head>
 
-  <body class="front">
+  {% assign bodyClass = "" %}
+
+  {% if page.url == "/" %}
+    {% assign bodyClass = "front" %}
+  {% endif %}
+
+  {% if page.url == "/development" or page.url == "/journey" %}
+    {% assign bodyClass = "dark" %}
+  {% endif %}
+
+  {% if page.url == "/about" %}
+    {% assign bodyClass = "middle" %}
+  {% endif %}
+
+  <body class="{{bodyClass}}">
     {% include header.html %}
     {{content}}
     {% include footer.html %}
