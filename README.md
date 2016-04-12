@@ -1,7 +1,24 @@
-# Phonebloks
+# Story Hopper
 
-After Phonebloks got a new website and openness is part of our company culture, we've decided to put in on GitHub too. So that other developers can report issues, fix bugs or just give us feedback.
+This is the Jekyll site that powers [Phonebloks](http://phonebloks.com).
 
-We haven't thought of a local development enviroment for third-party-developers yet, therefore you need to think of your own one (probably an empty WordPress setup containing this theme) and then file a pull request.
+## Contribute
 
-Thanks in advance for taking part in this! :blush:
+[Fork](https://help.github.com/articles/fork-a-repo/) and clone it
+
+```bash
+git clone https://github.com/hakkens/phonebloks.git
+```
+
+Install Jekyll and a special gem from GitHub (if running the following command won't work, try prepending "sudo")
+
+```bash
+gem install jekyll github-pages
+```
+
+Run Jekyll within the repo!
+
+```bash
+cd phonebloks
+jekyll serve -w
+```
