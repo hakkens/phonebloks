@@ -621,6 +621,10 @@ iframe {
   fill: #cd201f;
 }
 
+#footer .social a[href*="github"]:hover svg {
+  fill: #ff9933;
+}
+
 #footer .social a[href*="nl"]:hover svg {
   fill: #eeff40;
 }
