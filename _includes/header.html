@@ -14,23 +14,24 @@
   <div class="inner">
     <nav>
       <ul>
-        <li>
-          <a href="/journey">
-            {% include svg/menu/journey.svg %}
-          </a>
-        </li>
+        {% assign sorted = (site.pages | sort: "index") %}
 
-        <li>
-          <a href="/development">
-            {% include svg/menu/development.svg %}
-          </a>
-        </li>
+        {% for node in sorted %}
+          {% assign current = nil %}
 
-        <li>
-          <a href="/help-us">
-            {% include svg/menu/help-us.svg %}
-          </a>
-        </li>
+          {% if page.url == node.url %}
+            {% assign current = "current_page_item" %}
+          {% endif %}
+
+          {% unless node.url contains "assets" or node.name contains "index" %}
+            {% assign nameParts = node.name | split: "." %}
+            {% capture svgPath %}svg/menu/{{nameParts | first}}.svg{% endcapture %}
+
+            <li class="{{current}}">
+              <a href="{{node.url}}">{% include {{svgPath}} %}</a>
+            </li>
+          {% endunless %}
+        {% endfor %}
       </ul>
     </nav>
   </div>
