@@ -23,7 +23,7 @@
             {% assign current = "current_page_item" %}
           {% endif %}
 
-          {% unless node.url contains "assets" or node.name contains "index" %}
+          {% unless node.url contains "assets" or node.menu == false %}
             {% assign nameParts = node.name | split: "." %}
             {% capture svgPath %}svg/menu/{{nameParts | first}}.svg{% endcapture %}
 
