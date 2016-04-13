@@ -15,7 +15,7 @@ index: 1
   <div class="inner">
     {% for post in site.posts reversed %}
       <article class="{{post.kind}}">
-        <time>{{post.date}}</time>
+        <time>{{ post.date | date: "%Y" }}</time>
 
         {% if post.image contains "/" %}
           {{post.content}}
