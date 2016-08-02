@@ -1,5 +1,5 @@
 ---
-kind: left
+kind: right
 image: 2015/09/new-website1.jpg
 ---
 

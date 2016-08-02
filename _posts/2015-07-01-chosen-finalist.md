@@ -1,5 +1,5 @@
 ---
-kind: right
+kind: left
 image: 2015/09/phonebloks_concept_3.jpg
 ---
 

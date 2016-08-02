@@ -1,6 +1,6 @@
 ---
 title: Sennheiser Video
-kind: large
+kind: left
 image: Jyv4PeThisQ
 ---
 
