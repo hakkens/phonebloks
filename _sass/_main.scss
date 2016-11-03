@@ -632,12 +632,19 @@ iframe {
 
 #overlay {
   position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: #2E2E2E;
   z-index: 999999;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
+}
+
+#overlay .close {
+  position: absolute;
 }
 
 #overlay .otherby img {
