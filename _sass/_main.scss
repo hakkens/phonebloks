@@ -630,6 +630,26 @@ iframe {
   fill: #eeff40;
 }
 
+#overlay {
+  position: fixed;
+  background: #2E2E2E;
+  z-index: 999999;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+#close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  text-indent: -999999px;
+  background: url(/assets/images/close.gif);
+  background-size: 20px;
+  background-repeat: no-repeat;
+}
+
 #error {
   background: none !important;
 }
