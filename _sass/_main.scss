@@ -639,10 +639,22 @@ iframe {
   bottom: 0;
   right: 0;
 }
-#overlay .external img {
-  width: 200px;
+
+#overlay .otherby img {
+  width: 400px;
   height: auto;
 }
+
+#overlay .external img {
+  width: 230px;
+  height: auto;
+}
+
+#overlay .overlay-social img {
+  width: 250px;
+  height: auto;
+}
+
 #close {
   position: absolute;
   right: 0;
