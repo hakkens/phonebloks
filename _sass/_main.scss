@@ -645,6 +645,12 @@ iframe {
 
 #overlay .close {
   position: absolute;
+  right: 20px;
+  top: 20px;
+  text-indent: -99999px;
+  background: url(/assets/images/close.gif);
+  background-size: 30px;
+  background-repeat: no-repeat;
 }
 
 #overlay .otherby img {
@@ -655,21 +661,16 @@ iframe {
 #overlay .external img {
   width: 230px;
   height: auto;
+  margin: 30px;
+}
+
+#overlay a:hover {
+  border: 0;
 }
 
 #overlay .overlay-social img {
   width: 250px;
   height: auto;
-}
-
-#close {
-  position: absolute;
-  right: 0;
-  top: 0;
-  text-indent: -999999px;
-  background: url(/assets/images/close.gif);
-  background-size: 20px;
-  background-repeat: no-repeat;
 }
 
 #error {
