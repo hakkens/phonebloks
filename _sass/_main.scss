@@ -639,7 +639,10 @@ iframe {
   bottom: 0;
   right: 0;
 }
-
+#overlay .external img {
+  width: 200px;
+  height: auto;
+}
 #close {
   position: absolute;
   right: 0;
