@@ -632,7 +632,7 @@ iframe {
 
 #overlay {
   position: fixed;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   background: #2E2E2E;
@@ -649,7 +649,8 @@ iframe {
   top: 20px;
   text-indent: -99999px;
   background: url(/assets/images/close.gif);
-  background-size: 30px;
+  background-size: 35px;
+  height: 35px;
   background-repeat: no-repeat;
 }
 
