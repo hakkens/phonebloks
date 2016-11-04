@@ -1679,4 +1679,27 @@ iframe {
     width: 180px;
   }
 
+  #overlay {
+    overflow-y: hidden;
+  }
+
+  #overlay .otherby {
+    margin: 50px auto 0;
+    width: 320px;
+    max-width: 70vw;
+  }
+
+  #overlay .external img {
+    width: 320px;
+    max-width: 70vw;
+    height: auto;
+    margin: 10px;
+  }
+
+  #overlay .overlay-social img {
+    margin-top: 50px;
+    width: 300px;
+    height: auto;
+  }
+
 }
