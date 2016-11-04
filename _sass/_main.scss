@@ -632,7 +632,7 @@ iframe {
 
 #overlay {
   position: fixed;
-  display: none;
+  overflow: scroll;
   justify-content: center;
   align-items: center;
   background: #2E2E2E;
@@ -654,9 +654,12 @@ iframe {
   background-repeat: no-repeat;
 }
 
-#overlay .otherby img {
-  width: 400px;
-  height: auto;
+
+
+#overlay .otherby {
+  margin: 50px auto 0;
+  width: 240px;
+  max-width: 70vw;
 }
 
 #overlay .external img {
