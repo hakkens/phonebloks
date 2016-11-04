@@ -654,12 +654,13 @@ iframe {
 
 #overlay .close {
   position: absolute;
-  right: 20px;
-  top: 20px;
+  right: 40px;
+  top: 40px;
   text-indent: -99999px;
   background: url(/assets/images/close.gif);
-  background-size: 35px;
-  height: 35px;
+  background-size: 70px;
+  height: 70px;
+  width: 70px;
   background-repeat: no-repeat;
 }
 
@@ -1680,7 +1681,7 @@ iframe {
   }
 
   #overlay {
-    overflow-y: hidden;
+    overflow-y:
   }
 
   #overlay .otherby {
