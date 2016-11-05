@@ -635,7 +635,7 @@ iframe {
   overflow: scroll;
   justify-content: center;
   align-items: center;
-  background: #2E2E2E;
+  background: #313131;
   z-index: 999999;
   top: 0;
   left: 0;
@@ -654,13 +654,13 @@ iframe {
 
 #overlay .close {
   position: absolute;
-  right: 40px;
-  top: 40px;
+  right: 20px;
+  top: 20px;
   text-indent: -99999px;
   background: url(/assets/images/close.gif);
-  background-size: 70px;
-  height: 70px;
-  width: 70px;
+  background-size: 35px;
+  height: 35px;
+  width: 35px;
   background-repeat: no-repeat;
 }
 
@@ -1680,9 +1680,13 @@ iframe {
     width: 180px;
   }
 
-  #overlay {
-    overflow-y:
-  }
+  #overlay .close {
+  background-size: 70px;
+  height: 70px;
+  width: 70px;
+  top: 40px;
+  right: 40px;
+}
 
   #overlay .otherby {
     margin: 50px auto 0;
