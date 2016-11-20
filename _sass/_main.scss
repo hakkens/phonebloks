@@ -642,6 +642,7 @@ iframe {
   bottom: 0;
   right: 0;
   display: none;
+  -webkit-overflow-scrolling: touch;
 }
 
 #overlay.open {
