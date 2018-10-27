@@ -215,6 +215,7 @@ iframe {
     z-index: 99999;
     font-size: 14px;
     font-weight: bold;
+    display:none!important;
 }
 @media (min-width: 768px) {
 .notification {
